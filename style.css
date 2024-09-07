@@ -1,0 +1,86 @@
+/* -------- font imports ------- */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+body {
+    font-family: "JetBrains Mono", system-ui;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+a {
+    text-decoration: none
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-wrapper {
+    width: 75%;
+    margin-block: 1.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 1.2em;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    margin-inline: 3rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-section {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2rem;
+
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    order: 1;
+}
+
+.intro-large-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting {
+    font-size: 125%;
+}
+
+.name-large {
+    font-size: 200%;
+}
+
+.short-bio {
+    max-width: 50rem;
+}
+
+.avatar {
+    object-fit: contain;
+    width: 70%;
+    height: 70%;
+    order: 2;
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+}
