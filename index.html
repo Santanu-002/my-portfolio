@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 
@@ -19,30 +19,67 @@
             <nav class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <!-- <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a> -->
             </nav>
+            <div id="hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+            </div>
+
+            <div id="menu" class="nav-mobile-bg">
+                <div class="nav-mobile">
+                    <a id="close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <line x1="0" y1="0" x2="24" y2="24"></line>
+                          <line x1="0" y1="24" x2="24" y2="0"></line>
+                        </svg>
+                    </a>
+                      
+                    <div class="quick-links-wrapper">
+                        <p class="quick-links-text">#quick-links</p>
+                        <div class="quick-link-text-line"></div>
+                    </div>
+
+                    <div class="quick-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <main>
-        <section class="intro-section">
+        <section class="intro-section" id="home">
             <div class="intro">
                 <h1 class="intro-large-texts">
                     <span class="greeting">Hello, I'm</span>
-                    <span class="name-large">Santanu Pramanik.</span>
+                    <span class="heading">Santanu Pramanik</span>
                 </h1>
-                <p class="short-bio">
-                    I'm a B.Tech graduate in Computer Science Engineering with strong expertise in Django, HTML, CSS,
-                    Tailwind CSS, and JavaScript. I also have experience with Java and Python. I love creating web
-                    applications and building responsive, user-friendly interfaces. Let's connect and collaborate on
-                    exciting projects!
+                <p class="body-text">
+                    I'm a B.Tech graduate in Computer Science Engineering with strong expertise in Django, HTML, CSS, Tailwind CSS, and JavaScript. I also have experience with Java and Python. I love creating web applications and building responsive, user-friendly interfaces. Let's connect and collaborate on exciting projects!
                 </p>
             </div>
             <img src="assets/man.png" alt="avatar" class="avatar">
         </section>
-    </main>
 
+        <section class="about-section" id="about">
+            <div class="heading-wrapper">
+                <h1 class="heading">about</h1>
+                <div class="hr-line"></div>
+            </div>
+
+            <div>
+                <p class="body-text">
+                    I'm a B.Tech graduate in Computer Science Engineering in the year of 2024. I have experience with Java and Python. I love creating web applications and building responsive, user-friendly interfaces. Let's connect and collaborate on exciting projects!
+                </p>
+
+                
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
