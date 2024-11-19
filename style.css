@@ -1,6 +1,5 @@
 /* -------- font imports ------- */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 body {
     font-family: "JetBrains Mono", monospace;
@@ -10,12 +9,24 @@ body {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 .navbar {
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: snow;
+}
+
+.scrolled {
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
+        rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px,
+        rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+        rgba(42, 51, 70, 0.04) 0px 6px 6px -3px,
+        rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
+        rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
 }
 
 .navbar-wrapper {
@@ -44,7 +55,7 @@ a {
     display: none;
 }
 
-.nav-mobile-bg{
+.nav-mobile-bg {
     display: none;
 }
 
@@ -73,6 +84,7 @@ main {
 
 .greeting {
     font-size: 125%;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .name-large {
@@ -94,9 +106,9 @@ main {
     z-index: -1;
 }
 
-#download-cv-btn{
+#download-cv-btn {
     width: fit-content;
-    background-color:rgba(254, 178, 50);
+    background-color: rgb(254, 178, 50);
     padding: 12px;
     border-radius: 8px;
     display: flex;
@@ -104,26 +116,25 @@ main {
     column-gap: 16px;
     font-weight: bold;
     color: darkslategray;
-    transition: ease-in-out 150ms ;
-
+    transition: ease-in-out 150ms;
 }
 
 #download-cv-btn:hover {
-    box-shadow: rgba(254, 178, 50) 0px 7px 29px 0px;
+    box-shadow: rgb(254, 178, 50) 0px 7px 29px 0px;
 }
 
-#social-links img{
+#social-links img {
     width: 28px;
 }
 
-.social-link-text-wrapper{
+.social-link-text-wrapper {
     display: flex;
     align-items: center;
     column-gap: 8px;
     margin-top: 16px;
 }
 
-.social-links-text{
+.social-links-text {
     font-size: 14px;
     text-wrap: nowrap;
     color: rgba(0, 0, 0, 0.5);
@@ -150,7 +161,7 @@ main {
     transition: 200ms ease-in-out;
 }
 
-#social-links a:hover{
+#social-links a:hover {
     background: aqua;
     box-shadow: rgb(135, 206, 235) 0px 7px 29px 0px;
     transform: scale(1.2);
@@ -163,27 +174,29 @@ main {
 .heading-wrapper {
     display: flex;
     align-items: center;
-    column-gap: 2rem;
+    column-gap: 1rem;
 }
 
 .heading {
     font-size: 44px;
+    color: darkslateblue;
 }
 
 .hr-line {
     width: 100%;
-    height: 4px;
-    background-color: #333;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 50px;
 }
 
 @media (max-width: 740px) {
 
-    .navbar-wrapper, main {
+    .navbar-wrapper,
+    main {
         padding-inline: 18px;
     }
 
-    .nav-links{
+    .nav-links {
         display: none;
     }
 
@@ -201,12 +214,12 @@ main {
         left: 0;
     }
 
-    .nav-mobile{
-      width: 70%;
-      height: 100%;
-      background-color: snow;
-      padding: 3rem 16px;
-      position: relative;
+    .nav-mobile {
+        width: 70%;
+        height: 100%;
+        background-color: snow;
+        padding: 3rem 16px;
+        position: relative;
     }
 
     #close-btn {
@@ -220,8 +233,8 @@ main {
         top: 10px;
         border: 1px solid rgba(0, 0, 0, 0.25);
         border-radius: 2px;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     }
 
     .quick-links-wrapper {
@@ -230,19 +243,19 @@ main {
         column-gap: 8px;
     }
 
-    .quick-link-text-line{
+    .quick-link-text-line {
         width: 100%;
         height: 2px;
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 50px;
     }
 
-    .quick-links-text{
+    .quick-links-text {
         text-wrap: nowrap;
         font-size: 14px;
         color: rgba(0, 0, 0, 0.5);
     }
-    
+
     .quick-links {
         display: flex;
         flex-direction: column;
@@ -250,7 +263,7 @@ main {
         padding-inline-start: 16px;
     }
 
-    .quick-links a{
+    .quick-links a {
         border-bottom: solid 1px rgba(0, 0, 0, 0.2);
         padding-block: 14px;
     }
@@ -281,7 +294,6 @@ main {
         font-size: smaller;
     }
 
-
     .intro {
         order: 2;
     }
@@ -304,25 +316,21 @@ main {
         column-gap: 16px;
     }
 
-    #social-links a{
+    #social-links a {
         width: fit-content;
     }
 
-    #social-links a:hover{
+    #social-links a:hover {
         box-shadow: none;
         transform: none;
         background-color: transparent;
     }
 
-    #social-links img{
+    #social-links img {
         width: 44px;
-    }  
+    }
 
     .heading-wrapper {
         column-gap: 1rem;
     }
-
-
-
-
 }
