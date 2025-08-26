@@ -302,7 +302,6 @@ main {
 }
 
 @media (max-width: 740px) {
-
   .navbar-wrapper,
   main {
     padding-inline: 18px;
