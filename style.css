@@ -16,7 +16,6 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url(assets/Capa.svg) no-repeat;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -38,7 +37,8 @@ a {
 .navbar {
   display: flex;
   justify-content: center;
-  position: sticky;
+  position: fixed;
+  top: 0;
   width: 100%;
   top: 0;
   transition: background-color 300ms ease-in-out;
@@ -95,10 +95,13 @@ a {
 }
 
 .intro-section {
+  
+  background: url(assets/Capa.svg) no-repeat fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40cqmax;
+  height: 100dvh;
+  position: relative;
 }
 
 .intro {
@@ -274,6 +277,32 @@ a {
   background-color: transparent;
   border: none;
   fill: var(--white);
+}
+
+
+.scroll-btn {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--platinum);
+  padding: 1em;
+  border-radius: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+.scroll-btn svg{
+  fill: var(--blue);
+  width: 30px;
+  height: 30px;
 }
 
 .skills-section {
