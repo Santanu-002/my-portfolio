@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url(assets/Capa.svg) no-repeat local;
+  background: url(assets/Capa.svg) no-repeat;
   font-weight: 400;
   margin: 0;
   padding: 0;
