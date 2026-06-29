@@ -1,29 +1,21 @@
 /* -------- Contact Section Styles ------- */
 #contact {
-  background-color: #f4f6fc;
-  color: var(--text-primary-light);
+  background-color: var(--platinum);
+  color: var(--oxford-blue);
   padding-block: 8%;
   gap: 3rem;
   position: relative;
 }
 
 #contact h1 {
-  color: var(--text-primary-light);
+  color: var(--oxford-blue);
   font-size: 2.5rem;
   font-weight: 700;
   position: relative;
   margin-bottom: 1rem;
 }
 
-#contact h1::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 4px;
-  background: var(--grad-primary);
-  border-radius: 2px;
-  margin: 10px auto 0;
-}
+
 
 .contact-wrapper {
   display: grid;

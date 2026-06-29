@@ -7,7 +7,7 @@
   display: flex;
   max-width: 60%;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
   align-items: center;
   order: 1;
 }
@@ -36,7 +36,7 @@
   align-items: center;
   margin-top: -20px;
   color: var(--inactive);
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .slider {
@@ -53,6 +53,7 @@
 
 .slider span {
   display: block;
+  text-align: center;
   color: var(--blue);
   animation: slide 8s infinite ease-in-out;
 }
@@ -112,7 +113,7 @@
 }
 
 #social-links {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   column-gap: 1em;
 }
@@ -183,7 +184,9 @@
 
 .scroll-btn {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--platinum);
   padding: 1em;
   border-radius: 120px;
@@ -193,15 +196,17 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   animation: bounce 2s infinite ease-in-out;
+  opacity: 1 !important;
+  z-index: 10;
 }
 
 @keyframes bounce {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
   50% {
-    transform: translateY(-12px);
+    transform: translateX(-50%) translateY(-12px);
   }
 }
 
@@ -216,7 +221,7 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-block: 1rem 1.8rem;
+  margin-block: 0.5rem 1rem;
   background-color: rgba(35, 73, 255, 0.04);
   border: 1px solid rgba(35, 73, 255, 0.08);
   padding: 0.8rem 1.8rem;

@@ -1,7 +1,16 @@
 /* -------- Skills Section Styles ------- */
 #skills-section {
+  background-color: var(--platinum);
+  color: var(--oxford-blue);
   padding-block: 5%;
   gap: 4rem;
+}
+
+#skills-section h1 {
+  color: var(--oxford-blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 #skills {
