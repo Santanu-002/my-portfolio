@@ -1,0 +1,212 @@
+/* -------- Hero Section Styles ------- */
+.intro-section {
+  background: url(../assets/Capa.svg) no-repeat fixed;
+}
+
+.intro {
+  display: flex;
+  max-width: 60%;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  order: 1;
+}
+
+#headline {
+  text-align: center;
+  line-height: 80px;
+}
+
+.intro h1 {
+  font-size: 44pt;
+  color: var(--oxford-blue);
+}
+
+.intro .greeting {
+  font-size: 28pt;
+  color: var(--inactive);
+  line-height: 42px;
+}
+
+.body-text {
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: -20px;
+  color: var(--inactive);
+  margin-bottom: 10px;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: var(--blue) 1px solid;
+  padding-inline: 4px;
+  border-radius: 4px;
+  height: 1.2em;
+  line-height: 34px;
+  overflow: hidden;
+}
+
+.slider span {
+  display: block;
+  color: var(--blue);
+  animation: slide 8s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0%,
+  10% {
+    transform: translateY(0%);
+  } /* Web visible */
+
+  20%,
+  50% {
+    transform: translateY(-100%);
+  }
+
+  60%,
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.download-btn-wrapper {
+  display: flex;
+  column-gap: 1em;
+}
+
+.view-btn,
+.download-btn {
+  display: block;
+  width: 12rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 12pt;
+  border-radius: 4px;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.view-btn {
+  color: var(--blue);
+  background-color: var(--platinum);
+  border: 2px solid var(--blue);
+}
+
+.download-btn {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.view-btn:hover {
+  color: var(--white);
+  background-color: var(--oxford-blue);
+  border-color: var(--oxford-blue);
+}
+
+.download-btn:hover {
+  background-color: var(--oxford-blue);
+}
+
+#social-links {
+  margin-top: 20px;
+  display: flex;
+  column-gap: 1em;
+}
+
+#social-links .links {
+  padding-inline-end: 8px;
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  border-radius: 25px;
+  border: 2px var(--blue) solid;
+  color: var(--blue);
+  background-color: var(--platinum);
+  transition: color 300ms ease-in-out, border 300ms ease-in-out,
+    background-color 300ms ease-in-out;
+}
+
+#social-links .links svg {
+  box-sizing: content-box;
+  scale: 1.1;
+  border-radius: 25px;
+  fill: var(--white);
+  padding: 4px;
+  background-color: var(--blue);
+  width: 20px;
+  border: 1px solid var(--blue);
+  transition: color 300ms ease-in-out, border 300ms ease-in-out,
+    background-color 300ms ease-in-out;
+}
+
+.link_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 300ms ease-in-out, border 300ms ease-in-out,
+    background-color 300ms ease-in-out;
+}
+
+#social-links .link_text svg {
+  box-sizing: content-box;
+  background-color: transparent;
+  fill: var(--blue);
+  transform: rotate(45deg);
+  border: none;
+  width: 10px;
+  transition: color 300ms ease-in-out, border 300ms ease-in-out,
+    background-color 300ms ease-in-out;
+}
+
+#social-links .links:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
+}
+
+#social-links .links:hover svg {
+  background-color: transparent;
+  fill: var(--white);
+}
+
+#social-links .links:hover .link_text svg {
+  background-color: transparent;
+  border: none;
+  fill: var(--white);
+}
+
+.scroll-btn {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--platinum);
+  padding: 1em;
+  border-radius: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.scroll-btn svg {
+  fill: var(--blue);
+  width: 30px;
+  height: 30px;
+}

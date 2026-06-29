@@ -1,0 +1,10 @@
+/* -------- About Me Section Styles ------- */
+#about_me {
+  background-color: var(--oxford-blue);
+  color: var(--platinum);
+  gap: 4rem;
+}
+
+.about_body {
+  text-align: justify;
+}

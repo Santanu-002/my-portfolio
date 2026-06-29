@@ -1,0 +1,28 @@
+:root {
+  --black: #070d19;
+  --oxford-blue: #0b1528;
+  --blue: #2349ff;
+  --platinum: #f4f6fc;
+  --white: #ffffff;
+  --inactive: #8892b0;
+  
+  /* Premium Palette Additions */
+  --indigo-dark: #0f172a;
+  --slate-dark: #1e293b;
+  --card-bg-dark: #13223f;
+  --card-bg-light: #ffffff;
+  --text-primary-dark: #f8fafc;
+  --text-secondary-dark: #94a3b8;
+  --text-primary-light: #0f172a;
+  --text-secondary-light: #475569;
+  
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, #2349ff 0%, #6366f1 100%);
+  --grad-accent: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --grad-card: linear-gradient(145deg, #172747 0%, #0d172a 100%);
+  --grad-accent-dark: linear-gradient(135deg, #0b1528 0%, #060b14 100%);
+  
+  /* Glow Colors */
+  --shadow-blue: rgba(35, 73, 255, 0.25);
+  --shadow-accent: rgba(99, 102, 241, 0.15);
+}

@@ -1,0 +1,188 @@
+/* -------- Contact Section Styles ------- */
+#contact {
+  background-color: #f4f6fc;
+  color: var(--text-primary-light);
+  padding-block: 8%;
+  gap: 3rem;
+  position: relative;
+}
+
+#contact h1 {
+  color: var(--text-primary-light);
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+#contact h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--grad-primary);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 960px;
+  padding-inline: 1rem;
+}
+
+.contact-card {
+  background-color: var(--white);
+  border: 1px solid rgba(35, 73, 255, 0.08);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(35, 73, 255, 0.04),
+              0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 400ms ease,
+              box-shadow 400ms ease;
+  position: relative;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(35, 73, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(35, 73, 255, 0.08);
+}
+
+.contact-card h2 {
+  color: var(--text-primary-light);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.contact-icon-box {
+  width: 46px;
+  height: 46px;
+  background-color: rgba(35, 73, 255, 0.06);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 300ms ease, transform 300ms ease;
+}
+
+.contact-icon-box svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--blue);
+  transition: fill 300ms ease;
+}
+
+.contact-method:hover .contact-icon-box {
+  background-color: var(--blue);
+  transform: scale(1.05);
+}
+
+.contact-method:hover .contact-icon-box svg {
+  fill: var(--white);
+}
+
+.contact-method-text h3 {
+  font-size: 8pt;
+  color: var(--inactive);
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.contact-method-text p, .contact-method-text a {
+  font-size: 10.5pt;
+  color: var(--text-primary-light);
+  font-weight: 500;
+  margin: 0;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.contact-method-text a:hover {
+  color: var(--blue);
+}
+
+.contact-social-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid rgba(35, 73, 255, 0.15);
+  color: var(--blue);
+  background-color: var(--white);
+  font-weight: 600;
+  font-size: 10pt;
+  text-decoration: none;
+  transition: transform 300ms ease, background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+}
+
+.contact-social-btn svg.social-icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--blue);
+  transition: fill 300ms ease;
+}
+
+.contact-social-btn svg.arrow-icon {
+  width: 10px;
+  height: 10px;
+  fill: var(--blue);
+  transform: rotate(45deg);
+  transition: fill 300ms ease, transform 300ms ease;
+}
+
+/* Individual Brand Hovers */
+.contact-social-btn.github-btn:hover {
+  background-color: #17191c;
+  border-color: #17191c;
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+.contact-social-btn.linkedin-btn:hover {
+  background-color: #0077b5;
+  border-color: #0077b5;
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+.contact-social-btn.whatsapp-btn:hover {
+  background-color: #25d366;
+  border-color: #25d366;
+  color: var(--white);
+  transform: translateX(4px);
+}
+
+.contact-social-btn:hover svg.social-icon,
+.contact-social-btn:hover svg.arrow-icon {
+  fill: var(--white);
+}
+
+.contact-social-btn:hover svg.arrow-icon {
+  transform: rotate(45deg) translate(2px, -2px);
+}

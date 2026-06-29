@@ -1,0 +1,53 @@
+/* -------- Navbar Styles ------- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background-color 300ms ease-in-out;
+  z-index: 99;
+}
+
+.scrolled {
+  background-color: var(--platinum);
+}
+
+.navbar-wrapper {
+  width: 100%;
+  margin-block: 1%;
+  padding-inline: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Arizonia", cursive;
+  font-size: 28pt;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  font-size: small;
+  align-items: center;
+  column-gap: 2rem;
+  margin-inline: 3rem;
+}
+
+.active {
+  background-color: var(--blue);
+  color: var(--white);
+  padding-inline: 1.25rem;
+  padding-block: 0.5rem;
+  border-radius: 5rem;
+}
+
+#hamburger {
+  display: none;
+}
+
+.nav-mobile-bg {
+  display: none;
+}

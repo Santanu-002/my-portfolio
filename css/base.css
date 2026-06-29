@@ -1,0 +1,151 @@
+/* -------- font imports ------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&display=swap");
+
+/* -------- Reset & Base Styles ------- */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: var(--platinum);
+  color: var(--oxford-blue);
+  user-select: none;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--oxford-blue);
+}
+
+main {
+  position: relative;
+}
+
+/* -------- Scrollbar Styles ------- */
+::-webkit-scrollbar-button:single-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e90ff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1565c0;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1e90ff #e0e0e0;
+}
+
+/* -------- Section Animations & Defaults ------- */
+section {
+  padding-inline: 15%;
+  padding-block: 6rem;
+  min-height: 100dvh;
+  background-color: var(--platinum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+}
+
+section h1 {
+  font-size: 32pt;
+}
+
+section > * {
+  opacity: 0; /* start invisible */
+  transform: translateY(40px); /* pushed down */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section > *.show {
+  opacity: 1; /* fade in */
+  transform: translateY(0); /* slide up */
+}
+
+/* -------- Back to Top Button ------- */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 24px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15px);
+  transition: opacity 300ms ease, transform 300ms ease, background-color 300ms ease, border-color 300ms ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top svg {
+  fill: var(--white);
+  width: 20px;
+  height: 20px;
+  transition: transform 300ms ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--oxford-blue);
+  border-color: var(--oxford-blue);
+}
+
+.back-to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* -------- Footer Styles ------- */
+footer {
+  background-color: var(--oxford-blue);
+  color: var(--inactive);
+  text-align: center;
+  padding-block: 2rem;
+  font-size: 9pt;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer span {
+  color: var(--white);
+  font-weight: 500;
+}
