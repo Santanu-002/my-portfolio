@@ -1,10 +1,12 @@
-/* -------- About Me Section Styles ------- */
 #about_me {
   background-color: var(--oxford-blue);
   color: var(--platinum);
-  gap: 4rem;
+  gap: var(--space-7);
 }
 
 .about_body {
   text-align: justify;
+  max-width: 65ch;
+  line-height: var(--leading-normal);
+  font-size: var(--font-base);
 }

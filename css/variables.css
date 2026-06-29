@@ -1,12 +1,13 @@
 :root {
+  /* ─── Existing Colors ─── */
   --black: #070d19;
   --oxford-blue: #0b1528;
   --blue: #2349ff;
   --platinum: #f4f6fc;
   --white: #ffffff;
   --inactive: #8892b0;
-  
-  /* Premium Palette Additions */
+
+  /* Premium Palette */
   --indigo-dark: #0f172a;
   --slate-dark: #1e293b;
   --card-bg-dark: #13223f;
@@ -15,14 +16,100 @@
   --text-secondary-dark: #94a3b8;
   --text-primary-light: #0f172a;
   --text-secondary-light: #475569;
-  
+
   /* Gradients */
   --grad-primary: linear-gradient(135deg, #2349ff 0%, #6366f1 100%);
   --grad-accent: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   --grad-card: linear-gradient(145deg, #172747 0%, #0d172a 100%);
   --grad-accent-dark: linear-gradient(135deg, #0b1528 0%, #060b14 100%);
-  
+
   /* Glow Colors */
   --shadow-blue: rgba(35, 73, 255, 0.25);
   --shadow-accent: rgba(99, 102, 241, 0.15);
+
+  /* ─── NEW: Typography Scale (Major Third — 1.25 ratio) ─── */
+  --font-xs: 0.75rem;       /* 12px */
+  --font-sm: 0.875rem;      /* 14px */
+  --font-base: 1rem;        /* 16px */
+  --font-md: 1.125rem;      /* 18px */
+  --font-lg: 1.25rem;       /* 20px */
+  --font-xl: 1.5rem;        /* 24px */
+  --font-2xl: 2rem;         /* 32px */
+  --font-3xl: 2.5rem;       /* 40px */
+  --font-hero: 3rem;        /* 48px — hero heading only */
+
+  /* Font Weights */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semi: 600;
+  --weight-bold: 700;
+  --weight-extra: 800;
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.8;
+
+  /* ─── NEW: Spacing Scale (Base 4px) ─── */
+  --space-1: 0.25rem;      /* 4px */
+  --space-2: 0.5rem;       /* 8px */
+  --space-3: 0.75rem;      /* 12px */
+  --space-4: 1rem;         /* 16px */
+  --space-5: 1.5rem;       /* 24px */
+  --space-6: 2rem;         /* 32px */
+  --space-7: 3rem;         /* 48px */
+  --space-8: 4rem;         /* 64px */
+  --space-9: 6rem;         /* 96px */
+
+  /* ─── NEW: Border Radius ─── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 25px;
+  --radius-full: 9999px;
+
+  /* ─── NEW: Transitions ─── */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease;
+
+  /* ─── NEW: Z-Index Scale ─── */
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+
+  /* ─── NEW: Container Widths ─── */
+  --container-sm: 640px;
+  --container-md: 800px;
+  --container-lg: 960px;
+  --container-xl: 1100px;
+
+  /* ─── NEW: Blue Opacity Variants ─── */
+  --blue-4: rgba(35, 73, 255, 0.04);
+  --blue-8: rgba(35, 73, 255, 0.08);
+  --blue-10: rgba(35, 73, 255, 0.10);
+  --blue-15: rgba(35, 73, 255, 0.15);
+  --blue-20: rgba(35, 73, 255, 0.20);
+  --blue-25: rgba(35, 73, 255, 0.25);
+  --blue-40: rgba(35, 73, 255, 0.40);
+
+  /* ─── NEW: Shadow Tokens ─── */
+  --shadow-sm: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 6px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0px 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0px 8px 32px rgba(35, 73, 255, 0.10);
+
+  /* ─── NEW: Scrollbar Colors ─── */
+  --scrollbar-track: var(--platinum);
+  --scrollbar-thumb: var(--blue);
+  --scrollbar-thumb-hover: var(--oxford-blue);
+
+  /* ─── NEW: Brand Colors ─── */
+  --brand-github: #24292e;
+  --brand-linkedin: #0077b5;
+  --brand-whatsapp: #25d366;
+  --brand-email: #ea4335;
 }

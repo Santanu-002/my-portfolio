@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Santanu Pramanik — Flutter Developer portfolio. Building production-grade mobile apps with Flutter, Clean Architecture, BLoC, FastAPI, PostgreSQL, and WebSockets." />
+    <meta name="author" content="Santanu Pramanik" />
+    <meta name="keywords" content="Flutter Developer, Portfolio, Mobile App Developer, React, Next.js, FastAPI, PostgreSQL, WebSockets" />
+    <meta name="theme-color" content="#0b1528" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Santanu Pramanik | Portfolio" />
+    <meta property="og:description" content="Flutter Developer building production-grade mobile applications using Flutter, Clean Architecture, BLoC, FastAPI, PostgreSQL, and WebSockets." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/favicon.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Santanu Pramanik | Portfolio" />
+    <meta name="twitter:description" content="Flutter Developer building production-grade mobile applications." />
 
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
@@ -11,6 +26,8 @@
   </head>
 
   <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#home" class="skip-link">Skip to Content</a>
     <!-- navbar -->
     <div id="navbar" class="navbar">
       <div class="navbar-wrapper">
@@ -18,6 +35,7 @@
 
         <nav class="nav-links">
           <a href="#home" class="active">Home</a>
+          <a href="#about_me">About</a>
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#skills-section">Skills</a>
@@ -60,6 +78,7 @@
 
             <div class="quick-links">
               <a href="#home">Home</a>
+              <a href="#about_me">About</a>
               <a href="#experience">Experience</a>
               <a href="#education">Education</a>
               <a href="#skills-section">Skills</a>
@@ -78,14 +97,17 @@
             <h2 class="greeting">Hello, I'm</h2>
             <h1 class="name">Santanu Pramanik</h1>
           </div>
-          <p class="body-text">
-            Full-Stack
-            <span class="slider">
-              <span class="word">Web</span>
-              <span class="word">Mobile</span>
+          <div class="role-container">
+            <span class="role-line">Full-Stack</span>
+            <span class="role-line">
+              <span class="slider">
+                <span class="word">Mobile</span>
+                <span class="word">Web</span>
+              </span>
+              App
             </span>
-            App Developer
-          </p>
+            <span class="role-line">Developer</span>
+          </div>
 
           <div class="hero-stats">
             <div class="stat-item">
@@ -195,15 +217,7 @@
       <section id="about_me">
         <h1>About Me</h1>
         <p class="about_body">
-          I started my development journey with Python, Django, HTML, CSS, and
-          JavaScript, building strong fundamentals in web development. Over
-          time, I expanded my skills into modern frameworks like React, Next.js,
-          Node.js, and Express, crafting scalable and dynamic applications.
-          Recently, I have been exploring Flutter, Dart, and FastAPI, which has
-          strengthened my expertise in both mobile app development and
-          high-performance backend systems. Today, I bring together this diverse
-          skill set to create robust, user-friendly, and scalable digital
-          solutions across web and mobile platforms.
+          Flutter Developer with experience building production-grade mobile applications using Flutter, Clean Architecture, BLoC, FastAPI, PostgreSQL, and WebSockets. Skilled in developing scalable online-first, real-time communication platforms, and full-stack solutions from architecture design to deployment. Passionate about building performant, maintainable, and user-centric software products.
         </p>
       </section>
 
@@ -311,11 +325,11 @@
             <h2>Programing Languages</h2>
             <div class="skill-set">
               <div>
-                <img src="./assets/java.png" alt="html5" />
+                <img src="./assets/java.png" alt="Java" />
                 <span>Java</span>
               </div>
               <div>
-                <img src="./assets/python.png" alt="css3" />
+                <img src="./assets/python.png" alt="Python" />
                 <span>Python</span>
               </div>
             </div>
@@ -341,11 +355,11 @@
                 <span>React JS</span>
               </div>
               <div>
-                <img src="assets/next-js.png" alt="" />
+                <img src="assets/next-js.png" alt="Next.js" />
                 <span>Next Js</span>
               </div>
               <div>
-                <img src="assets/tailwind-css.png" alt="" />
+                <img src="assets/tailwind-css.png" alt="Tailwind CSS" />
                 <span>Tailwind CSS</span>
               </div>
             </div>
@@ -368,15 +382,15 @@
             <h2>Backend Development</h2>
             <div class="skill-set">
               <div>
-                <img src="assets/django.png" alt="html5" />
+                <img src="assets/django.png" alt="Django" />
                 <span>Django</span>
               </div>
               <div>
-                <img src="assets/FastAPI.png" alt="css3" />
+                <img src="assets/FastAPI.png" alt="FastAPI" />
                 <span>FastAPI</span>
               </div>
               <div>
-                <img src="assets/node-js.png" alt="JavaScript" />
+                <img src="assets/node-js.png" alt="Node.js" />
                 <span>Node JS</span>
               </div>
             </div>
@@ -386,15 +400,15 @@
             <h2>Database Management</h2>
             <div class="skill-set">
               <div>
-                <img src="assets/postgresql.png" alt="html5" />
+                <img src="assets/postgresql.png" alt="PostgreSQL" />
                 <span>PostgrSQL</span>
               </div>
               <div>
-                <img src="assets/supabase.png" alt="css3" />
+                <img src="assets/supabase.png" alt="Supabase" />
                 <span>Supabase</span>
               </div>
               <div>
-                <img src="assets/sqlite.png" alt="JavaScript" />
+                <img src="assets/sqlite.png" alt="SQLite" />
                 <span>SQLite</span>
               </div>
             </div>
@@ -568,7 +582,7 @@
             <h2>Social Connect</h2>
             <div class="contact-social-grid">
               <a href="https://github.com/Santanu-002" target="_blank" class="contact-social-btn github-btn">
-                <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="contact-social-inner">
                   <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
                   </svg>
@@ -580,7 +594,7 @@
               </a>
 
               <a href="https://www.linkedin.com/in/santanu-pramanik-offcial002" target="_blank" class="contact-social-btn linkedin-btn">
-                <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="contact-social-inner">
                   <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                   </svg>
@@ -592,7 +606,7 @@
               </a>
 
               <a href="https://wa.me/917872110997?text=Hi%20Santanu,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" class="contact-social-btn whatsapp-btn">
-                <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="contact-social-inner">
                   <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.15c-.25.7-1.44 1.37-2 1.42-.56.05-1.12.28-3.6-1.07-2.68-1.46-4.41-4.18-4.54-4.36-.13-.18-1.08-1.44-1.08-2.75 0-1.31.68-1.96.93-2.22.25-.26.54-.33.72-.33h.52c.18 0 .42-.01.65.52.23.56.81 1.99.88 2.14.07.15.12.33.02.52-.1.19-.15.3-.3.48-.15.18-.3.33-.45.52-.15.18-.3.33-.45.52-.15.19-.31.39-.13.7.18.31.81 1.34 1.74 2.17.93.83 1.72 1.09 2.03 1.25.31.16.49.13.68-.09.19-.22.81-.93 1.03-1.25.22-.32.44-.27.74-.16.3.11 1.9.9 2.23 1.06.33.16.55.24.63.38.08.14.08.82-.17 1.52z"/>
                   </svg>
@@ -619,6 +633,9 @@
         <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
       </svg>
     </button>
+
+    <!-- Project details modal mount point -->
+    <div id="project-modal"></div>
 
     <script type="module" src="./js/main.js"></script>
 

@@ -2,83 +2,81 @@
 #contact {
   background-color: var(--platinum);
   color: var(--oxford-blue);
-  padding-block: 8%;
-  gap: 3rem;
+  padding-block: var(--space-9);
+  gap: var(--space-7);
   position: relative;
 }
 
 #contact h1 {
   color: var(--oxford-blue);
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-2xl);
+  font-weight: var(--weight-bold);
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
-
-
 
 .contact-wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
   width: 100%;
-  max-width: 960px;
-  padding-inline: 1rem;
+  max-width: var(--container-lg);
+  padding-inline: var(--space-4);
+  margin: 0 auto;
 }
 
 .contact-card {
   background-color: var(--white);
-  border: 1px solid rgba(35, 73, 255, 0.08);
-  border-radius: 12px;
-  padding: 2.5rem;
+  border: 1px solid var(--blue-8);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  box-shadow: 0 10px 30px rgba(35, 73, 255, 0.04),
-              0 1px 3px rgba(0, 0, 0, 0.02);
-  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1),
-              border-color 400ms ease,
-              box-shadow 400ms ease;
+  gap: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
   position: relative;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(35, 73, 255, 0.2);
-  box-shadow: 0 20px 40px rgba(35, 73, 255, 0.08);
+  border-color: var(--blue-20);
+  box-shadow: var(--shadow-md);
 }
 
 .contact-card h2 {
   color: var(--text-primary-light);
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-size: var(--font-lg);
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-semi);
   letter-spacing: -0.5px;
 }
 
 .contact-method {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: var(--space-5);
 }
 
 .contact-icon-box {
   width: 46px;
   height: 46px;
-  background-color: rgba(35, 73, 255, 0.06);
-  border-radius: 50%;
+  background-color: var(--blue-8);
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background-color 300ms ease, transform 300ms ease;
+  transition: background-color var(--transition-base), transform var(--transition-base);
 }
 
 .contact-icon-box svg {
   width: 20px;
   height: 20px;
   fill: var(--blue);
-  transition: fill 300ms ease;
+  transition: fill var(--transition-base);
 }
 
 .contact-method:hover .contact-icon-box {
@@ -91,21 +89,21 @@
 }
 
 .contact-method-text h3 {
-  font-size: 8pt;
+  font-size: var(--font-xs);
   color: var(--inactive);
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 var(--space-1) 0;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: var(--weight-semi);
 }
 
 .contact-method-text p, .contact-method-text a {
-  font-size: 10.5pt;
+  font-size: var(--font-sm);
   color: var(--text-primary-light);
-  font-weight: 500;
+  font-weight: var(--weight-medium);
   margin: 0;
   text-decoration: none;
-  transition: color 200ms ease;
+  transition: color var(--transition-fast);
 }
 
 .contact-method-text a:hover {
@@ -115,29 +113,35 @@
 .contact-social-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .contact-social-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.4rem;
-  border-radius: 8px;
-  border: 1px solid rgba(35, 73, 255, 0.15);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--blue-15);
   color: var(--blue);
   background-color: var(--white);
-  font-weight: 600;
-  font-size: 10pt;
+  font-weight: var(--weight-semi);
+  font-size: var(--font-sm);
   text-decoration: none;
-  transition: transform 300ms ease, background-color 300ms ease, border-color 300ms ease, color 300ms ease;
+  transition: transform var(--transition-base), background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+}
+
+.contact-social-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
 .contact-social-btn svg.social-icon {
   width: 18px;
   height: 18px;
   fill: var(--blue);
-  transition: fill 300ms ease;
+  transition: fill var(--transition-base);
 }
 
 .contact-social-btn svg.arrow-icon {
@@ -145,27 +149,27 @@
   height: 14px;
   fill: var(--blue);
   transform: rotate(45deg);
-  transition: fill 300ms ease, transform 300ms ease;
+  transition: fill var(--transition-base), transform var(--transition-base);
 }
 
 /* Individual Brand Hovers */
 .contact-social-btn.github-btn:hover {
-  background-color: #17191c;
-  border-color: #17191c;
+  background-color: var(--brand-github);
+  border-color: var(--brand-github);
   color: var(--white);
   transform: translateX(4px);
 }
 
 .contact-social-btn.linkedin-btn:hover {
-  background-color: #0077b5;
-  border-color: #0077b5;
+  background-color: var(--brand-linkedin);
+  border-color: var(--brand-linkedin);
   color: var(--white);
   transform: translateX(4px);
 }
 
 .contact-social-btn.whatsapp-btn:hover {
-  background-color: #25d366;
-  border-color: #25d366;
+  background-color: var(--brand-whatsapp);
+  border-color: var(--brand-whatsapp);
   color: var(--white);
   transform: translateX(4px);
 }
@@ -177,4 +181,11 @@
 
 .contact-social-btn:hover svg.arrow-icon {
   transform: rotate(45deg) translate(2px, -2px);
+}
+
+/* Responsive Overrides (Mobile-First) */
+@media (min-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

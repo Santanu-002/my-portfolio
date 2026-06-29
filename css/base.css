@@ -15,13 +15,37 @@ body {
   padding: 0;
   background-color: var(--platinum);
   color: var(--oxford-blue);
-  user-select: none;
   position: relative;
 }
 
 a {
   text-decoration: none;
   color: var(--oxford-blue);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--blue);
+  color: var(--white);
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: top 300ms ease;
+  border-radius: var(--radius-sm);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 10px;
+  left: 10px;
 }
 
 main {
@@ -40,22 +64,22 @@ main {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e0e0e0;
+  background: var(--scrollbar-track);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e90ff;
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1565c0;
+  background: var(--scrollbar-thumb-hover);
 }
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: #1e90ff #e0e0e0;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 /* -------- Section Animations & Defaults ------- */
@@ -75,13 +99,13 @@ section h1 {
   font-size: 32pt;
 }
 
-section > * {
+.js-loaded section > * {
   opacity: 0; /* start invisible */
   transform: translateY(40px); /* pushed down */
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-section > *.show {
+.js-loaded section > *.show {
   opacity: 1; /* fade in */
   transform: translateY(0); /* slide up */
 }

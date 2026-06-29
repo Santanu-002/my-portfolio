@@ -29,48 +29,57 @@ export function initNavbar() {
     });
   }
 
-  if (navbar) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-  }
+  const desktopLinks = document.querySelectorAll(".nav-links a");
 
   // Active navigation link highlighting on scroll
   const scrollSections = [
-    { id: "home", selector: ".intro-section" },
-    { id: "experience", selector: "#experience" },
-    { id: "education", selector: "#education" },
-    { id: "skills-section", selector: "#skills-section" },
-    { id: "projects", selector: "#projects" },
-    { id: "contact", selector: "#contact" }
+    { id: "home", el: document.querySelector(".intro-section") },
+    { id: "about_me", el: document.querySelector("#about_me") },
+    { id: "experience", el: document.querySelector("#experience") },
+    { id: "education", el: document.querySelector("#education") },
+    { id: "skills-section", el: document.querySelector("#skills-section") },
+    { id: "projects", el: document.querySelector("#projects") },
+    { id: "contact", el: document.querySelector("#contact") }
   ];
 
+  let scrollTick = false;
   window.addEventListener("scroll", () => {
-    let currentActiveId = "home";
-    
-    scrollSections.forEach((sec) => {
-      const el = document.querySelector(sec.selector);
-      if (el) {
-        const top = el.getBoundingClientRect().top + window.scrollY;
-        // If scrolled past the section top with a small offset
-        if (window.scrollY >= top - 200) {
-          currentActiveId = sec.id;
-        }
-      }
-    });
+    if (!scrollTick) {
+      window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
 
-    const desktopLinks = document.querySelectorAll(".nav-links a");
-    desktopLinks.forEach((link) => {
-      const href = link.getAttribute("href");
-      if (href === `#${currentActiveId}` || (currentActiveId === "home" && href === "#home")) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
+        // Toggle navbar scrolled style
+        if (navbar) {
+          if (scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        }
+
+        // Active link highlighting
+        let currentActiveId = "home";
+        scrollSections.forEach((sec) => {
+          if (sec.el) {
+            const top = sec.el.getBoundingClientRect().top + scrollY;
+            if (scrollY >= top - 200) {
+              currentActiveId = sec.id;
+            }
+          }
+        });
+
+        desktopLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (href === `#${currentActiveId}` || (currentActiveId === "home" && href === "#home")) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+
+        scrollTick = false;
+      });
+      scrollTick = true;
+    }
   });
 }

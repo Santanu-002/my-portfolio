@@ -2,132 +2,70 @@
 #education {
   background-color: var(--oxford-blue);
   color: var(--text-primary-dark);
-  padding-block: 8%;
-  gap: 3rem;
+  padding-block: var(--space-9);
+  gap: var(--space-7);
   position: relative;
   width: 100%;
 }
 
 #education h1 {
   color: var(--white);
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-2xl);
+  font-weight: var(--weight-bold);
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 
-/* Reusing timeline spacing/structure */
-#education .timeline {
-  position: relative;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 2rem;
-}
-
+/* Dark theme overrides for timeline elements in education section */
 #education .timeline::before {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  transform: translateX(-50%);
-  top: 5px;
-  width: 2px;
-  height: calc(100% - 10px);
   background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 50px;
-}
-
-#education .timeline-item {
-  position: relative;
-  margin-bottom: 2.5rem;
-}
-
-#education .timeline-item:last-child {
-  margin-bottom: 0;
 }
 
 #education .timeline-dot {
-  position: absolute;
-  left: -1rem;
-  transform: translateX(-50%);
-  top: 8px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
   background-color: var(--oxford-blue);
-  border: 4px solid var(--blue);
   box-shadow: 0 0 0 4px rgba(35, 73, 255, 0.25);
-  z-index: 2;
-  transition: background-color 300ms ease, transform 300ms ease;
-}
-
-#education .timeline-item:hover .timeline-dot {
-  background-color: var(--blue);
-  transform: translateX(-50%) scale(1.2);
 }
 
 #education .timeline-content {
   background-color: var(--card-bg-dark);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  padding: 1.5rem 2rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
-  transition: transform 300ms ease-in-out, border-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
   text-align: left;
 }
 
 #education .timeline-content:hover {
-  transform: translateX(5px);
-  border-color: var(--blue);
   box-shadow: rgba(35, 73, 255, 0.15) 0px 8px 24px;
 }
 
-#education .timeline-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.25rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
 #education .timeline-header h3 {
-  font-size: 13pt;
+  font-size: var(--font-md);
   color: var(--white);
-  font-weight: 600;
-  margin: 0;
 }
 
 #education .timeline-date {
-  font-size: 8.5pt;
-  font-weight: 600;
-  color: var(--blue);
-  background-color: rgba(35, 73, 255, 0.08);
-  padding: 0.25rem 0.65rem;
-  border-radius: 50px;
+  font-size: var(--font-xs);
+  padding: var(--space-1) var(--space-3);
 }
 
 #education .timeline-company {
-  font-size: 10.5pt;
   color: var(--white);
-  font-weight: 500;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 var(--space-1) 0;
 }
 
 #education .timeline-major {
-  font-size: 9.5pt;
+  font-size: var(--font-sm);
   color: var(--text-secondary-dark);
-  margin: 0 0 1rem 0;
+  margin: 0 0 var(--space-4) 0;
 }
 
 /* Trailing Score Badge */
 #education .timeline-score-badge {
-  font-size: 8.5pt;
-  font-weight: 700;
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
   color: var(--blue);
-  background-color: rgba(35, 73, 255, 0.08);
+  background-color: var(--blue-8);
   border: 1px solid rgba(35, 73, 255, 0.2);
-  padding: 0.25rem 0.65rem;
-  border-radius: 50px;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-xl);
   flex-shrink: 0;
 }

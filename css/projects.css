@@ -2,38 +2,37 @@
 #projects {
   background-color: var(--oxford-blue);
   color: var(--text-primary-dark);
-  padding-block: 8%;
-  gap: 3rem;
+  padding-block: var(--space-9);
+  gap: var(--space-7);
   position: relative;
   width: 100%;
 }
 
 #projects h1 {
   color: var(--white);
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-2xl);
+  font-weight: var(--weight-bold);
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
-
-
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.2rem;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
   width: 100%;
-  max-width: 1100px;
-  padding-inline: 1rem;
+  max-width: 450px;
+  margin: 0 auto;
+  padding-inline: var(--space-4);
 }
 
 .project-card {
   background: var(--card-bg-dark);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
   transition: transform 450ms cubic-bezier(0.165, 0.84, 0.44, 1),
               border-color 450ms ease,
               box-shadow 450ms ease;
@@ -44,8 +43,8 @@
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(35, 73, 255, 0.4);
-  box-shadow: 0 20px 25px -5px rgba(35, 73, 255, 0.1), 0 10px 10px -5px rgba(35, 73, 255, 0.05);
+  border-color: var(--blue-40);
+  box-shadow: 0 20px 25px -5px var(--blue-10), 0 10px 10px -5px var(--blue-4);
 }
 
 /* Image Cover wrapper */
@@ -298,20 +297,20 @@
 }
 
 .project-card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: var(--font-lg);
+  font-weight: var(--weight-bold);
   color: var(--blue); /* Brand Royal Blue */
 }
 
 .project-card-repo {
-  font-size: 8.5pt;
-  font-weight: 600;
+  font-size: var(--font-xs);
+  font-weight: var(--weight-semi);
   color: var(--blue);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 2px;
-  transition: color 300ms ease;
+  gap: var(--space-1);
+  transition: color var(--transition-fast) ease;
 }
 
 .project-card-repo:hover {
@@ -320,19 +319,19 @@
 }
 
 .project-card-subtitle {
-  font-size: 7pt;
-  font-weight: 700;
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
   color: var(--text-secondary-dark);
   letter-spacing: 0.75px;
   text-transform: uppercase;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-1);
 }
 
 .project-card-description {
-  font-size: 9pt;
+  font-size: var(--font-sm);
   color: var(--text-secondary-dark);
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-2);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -342,17 +341,17 @@
 .project-card-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.8rem;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
 }
 
 .project-card-tech span {
-  background-color: rgba(35, 73, 255, 0.08);
+  background-color: var(--blue-8);
   color: var(--blue);
-  padding: 0.25rem 0.6rem;
-  border-radius: 20px;
-  font-size: 7.5pt;
-  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-xs);
+  font-weight: var(--weight-semi);
 }
 
 .project-card-btn {
@@ -360,15 +359,15 @@
   text-align: center;
   text-decoration: none;
   width: 100%;
-  padding: 0.7rem;
+  padding: var(--space-2);
   background-color: var(--blue);
   border: none;
-  color: white;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 9pt;
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  font-weight: var(--weight-bold);
+  font-size: var(--font-sm);
   cursor: pointer;
-  transition: background-color 300ms ease;
+  transition: background-color var(--transition-base);
   margin-top: auto;
 }
 
@@ -377,11 +376,17 @@
   color: var(--blue);
 }
 
-/* Responsive Grid rules */
-@media (max-width: 900px) {
+/* Responsive Grid rules (Mobile-First) */
+@media (min-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.8rem;
-    max-width: 450px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--container-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: var(--container-xl);
   }
 }

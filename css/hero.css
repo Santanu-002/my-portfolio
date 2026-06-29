@@ -1,58 +1,72 @@
 /* -------- Hero Section Styles ------- */
 .intro-section {
   background: url(../assets/Capa.svg) no-repeat fixed;
+  background-size: cover;
 }
 
 .intro {
   display: flex;
-  max-width: 60%;
+  max-width: var(--container-lg);
+  width: 100%;
   flex-direction: column;
-  gap: 0.5em;
+  gap: var(--space-2);
   align-items: center;
   order: 1;
 }
 
 #headline {
   text-align: center;
-  line-height: 80px;
+  line-height: var(--leading-tight);
 }
 
 .intro h1 {
-  font-size: 44pt;
+  font-size: var(--font-3xl);
   color: var(--oxford-blue);
 }
 
 .intro .greeting {
-  font-size: 28pt;
+  font-size: var(--font-2xl);
   color: var(--inactive);
-  line-height: 42px;
+  line-height: var(--leading-snug);
 }
 
-.body-text {
-  font-size: 28px;
-  font-weight: bold;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-top: -20px;
+.role-container {
+  font-size: var(--font-xl);
+  font-weight: var(--weight-bold);
   color: var(--inactive);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
   margin-bottom: 0px;
+}
+
+.role-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  line-height: var(--leading-tight);
 }
 
 .slider {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  border: var(--blue) 1px solid;
-  padding-inline: 4px;
-  border-radius: 4px;
-  height: 1.2em;
-  line-height: 34px;
+  border: var(--blue) 1.5px solid;
+  padding-inline: var(--space-3);
+  border-radius: var(--radius-md);
+  height: 2.2rem;
   overflow: hidden;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .slider span {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-shrink: 0;
   text-align: center;
   color: var(--blue);
   animation: slide 8s infinite ease-in-out;
@@ -62,13 +76,11 @@
   0%,
   10% {
     transform: translateY(0%);
-  } /* Web visible */
-
+  }
   20%,
   50% {
     transform: translateY(-100%);
   }
-
   60%,
   100% {
     transform: translateY(0%);
@@ -77,7 +89,8 @@
 
 .download-btn-wrapper {
   display: flex;
-  column-gap: 1em;
+  column-gap: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .view-btn,
@@ -85,10 +98,10 @@
   display: block;
   width: 12rem;
   text-align: center;
-  padding: 0.5rem 1rem;
-  font-size: 12pt;
-  border-radius: 4px;
-  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-base);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-base), background-color var(--transition-base);
 }
 
 .view-btn {
@@ -100,6 +113,7 @@
 .download-btn {
   color: var(--white);
   background-color: var(--blue);
+  border: 2px solid var(--blue);
 }
 
 .view-btn:hover {
@@ -110,48 +124,49 @@
 
 .download-btn:hover {
   background-color: var(--oxford-blue);
+  border-color: var(--oxford-blue);
 }
 
 #social-links {
-  margin-top: 10px;
+  margin-top: var(--space-4);
   display: flex;
-  column-gap: 1em;
+  column-gap: var(--space-4);
 }
 
 #social-links .links {
-  padding-inline-end: 8px;
-  font-size: small;
+  padding-inline-end: var(--space-2);
+  font-size: var(--font-xs);
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: var(--space-2);
   align-items: center;
-  border-radius: 25px;
+  border-radius: var(--radius-xl);
   border: 2px var(--blue) solid;
   color: var(--blue);
   background-color: var(--platinum);
-  transition: color 300ms ease-in-out, border 300ms ease-in-out,
-    background-color 300ms ease-in-out;
+  transition: color var(--transition-base), border var(--transition-base),
+    background-color var(--transition-base);
 }
 
 #social-links .links svg {
   box-sizing: content-box;
   scale: 1.1;
-  border-radius: 25px;
+  border-radius: var(--radius-xl);
   fill: var(--white);
   padding: 4px;
   background-color: var(--blue);
   width: 20px;
   border: 1px solid var(--blue);
-  transition: color 300ms ease-in-out, border 300ms ease-in-out,
-    background-color 300ms ease-in-out;
+  transition: color var(--transition-base), border var(--transition-base),
+    background-color var(--transition-base);
 }
 
 .link_text {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: color 300ms ease-in-out, border 300ms ease-in-out,
-    background-color 300ms ease-in-out;
+  transition: color var(--transition-base), border var(--transition-base),
+    background-color var(--transition-base);
 }
 
 #social-links .link_text svg {
@@ -161,8 +176,8 @@
   transform: rotate(45deg);
   border: none;
   width: 10px;
-  transition: color 300ms ease-in-out, border 300ms ease-in-out,
-    background-color 300ms ease-in-out;
+  transition: color var(--transition-base), border var(--transition-base),
+    background-color var(--transition-base);
 }
 
 #social-links .links:hover {
@@ -188,16 +203,14 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--platinum);
-  padding: 1em;
-  border-radius: 120px;
+  padding: var(--space-4);
+  border-radius: var(--radius-full);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: var(--shadow-md);
   animation: bounce 2s infinite ease-in-out;
-  opacity: 1 !important;
-  z-index: 10;
+  z-index: var(--z-dropdown);
 }
 
 @keyframes bounce {
@@ -220,12 +233,12 @@
 .hero-stats {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-block: 0.5rem 1rem;
-  background-color: rgba(35, 73, 255, 0.04);
-  border: 1px solid rgba(35, 73, 255, 0.08);
+  gap: var(--space-5);
+  margin-block: var(--space-2) var(--space-4);
+  background-color: var(--blue-4);
+  border: 1px solid var(--blue-8);
   padding: 0.8rem 1.8rem;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
 }
 
 .stat-item {
@@ -236,15 +249,15 @@
 }
 
 .stat-number {
-  font-size: 16pt;
-  font-weight: 800;
+  font-size: var(--font-xl);
+  font-weight: var(--weight-extra);
   color: var(--blue);
   letter-spacing: -0.5px;
 }
 
 .stat-label {
-  font-size: 7.5pt;
-  font-weight: 600;
+  font-size: var(--font-xs);
+  font-weight: var(--weight-semi);
   color: var(--oxford-blue);
   margin-top: 2px;
   text-transform: uppercase;
@@ -254,16 +267,16 @@
 .stat-divider {
   width: 1px;
   height: 30px;
-  background-color: rgba(35, 73, 255, 0.15);
+  background-color: var(--blue-15);
 }
 
 @media (max-width: 768px) {
   .hero-stats {
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--space-4);
     width: 100%;
     max-width: 280px;
-    padding: 1rem;
+    padding: var(--space-4);
   }
   .stat-divider {
     width: 60%;

@@ -6,11 +6,18 @@ export function initBackToTop() {
   const backToTopBtn = document.getElementById("back-to-top");
   if (!backToTopBtn) return;
 
+  let scrollTick = false;
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add("show");
-    } else {
-      backToTopBtn.classList.remove("show");
+    if (!scrollTick) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add("show");
+        } else {
+          backToTopBtn.classList.remove("show");
+        }
+        scrollTick = false;
+      });
+      scrollTick = true;
     }
   });
 

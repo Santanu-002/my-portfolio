@@ -5,8 +5,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  transition: background-color 300ms ease-in-out;
-  z-index: 99;
+  transition: background-color var(--transition-base);
+  z-index: var(--z-sticky);
 }
 
 .scrolled {
@@ -15,7 +15,7 @@
 
 .navbar-wrapper {
   width: 100%;
-  margin-block: 1%;
+  margin-block: var(--space-2);
   padding-inline: 10%;
   display: flex;
   justify-content: space-between;
@@ -23,25 +23,37 @@
 
 .logo {
   font-family: "Arizonia", cursive;
-  font-size: 28pt;
+  font-size: var(--font-xl);
   text-align: center;
-  font-weight: bold;
+  font-weight: var(--weight-bold);
 }
 
 .nav-links {
   display: flex;
-  font-size: small;
+  font-size: var(--font-sm);
   align-items: center;
-  column-gap: 2rem;
-  margin-inline: 3rem;
+  column-gap: var(--space-5);
+  margin-inline: var(--space-7);
+}
+
+.nav-links a {
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--blue);
 }
 
 .active {
   background-color: var(--blue);
   color: var(--white);
-  padding-inline: 1.25rem;
-  padding-block: 0.5rem;
-  border-radius: 5rem;
+  padding-inline: var(--space-4);
+  padding-block: var(--space-2);
+  border-radius: var(--radius-xl);
+}
+
+.active:hover {
+  color: var(--white) !important;
 }
 
 #hamburger {

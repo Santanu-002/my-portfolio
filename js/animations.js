@@ -6,18 +6,28 @@ export function initAnimations() {
   const sections = document.querySelectorAll("section");
   if (!sections.length) return;
 
+  const timeouts = new Map();
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        const children = entry.target.querySelectorAll("*");
+        const sectionId = entry.target.id || entry.target.className;
+        const children = Array.from(entry.target.children);
+
+        // Clear any pending timeouts for this section to prevent race conditions
+        if (timeouts.has(sectionId)) {
+          timeouts.get(sectionId).forEach((t) => clearTimeout(t));
+          timeouts.delete(sectionId);
+        }
 
         if (entry.isIntersecting) {
-          // If section is visible -> animate each child with a delay
+          const sectionTimeouts = [];
           children.forEach((el, i) => {
-            setTimeout(() => el.classList.add("show"), i * 200);
+            const t = setTimeout(() => el.classList.add("show"), i * 200);
+            sectionTimeouts.push(t);
           });
+          timeouts.set(sectionId, sectionTimeouts);
         } else {
-          // If section goes out of view -> reset
           children.forEach((el) => el.classList.remove("show"));
         }
       });
