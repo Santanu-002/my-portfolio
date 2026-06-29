@@ -210,3 +210,58 @@
   width: 30px;
   height: 30px;
 }
+
+/* Hero Highlights Stats Bar */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 1rem 1.8rem;
+  background-color: rgba(35, 73, 255, 0.04);
+  border: 1px solid rgba(35, 73, 255, 0.08);
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 16pt;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: -0.5px;
+}
+
+.stat-label {
+  font-size: 7.5pt;
+  font-weight: 600;
+  color: var(--oxford-blue);
+  margin-top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 30px;
+  background-color: rgba(35, 73, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem;
+  }
+  .stat-divider {
+    width: 60%;
+    height: 1px;
+  }
+}

@@ -149,8 +149,8 @@
 }
 
 .contact-social-btn svg.arrow-icon {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   fill: var(--blue);
   transform: rotate(45deg);
   transition: fill 300ms ease, transform 300ms ease;

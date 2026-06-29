@@ -1,161 +1,386 @@
-/* -------- Projects Section Styles ------- */
+/* -------- Projects Section Styles (Card Redesign) ------- */
 #projects {
-  background-color: #070d19;
-  color: var(--text-primary-dark);
+  background-color: #f1f5f9;
+  color: var(--oxford-blue);
   padding-block: 8%;
   gap: 3rem;
   position: relative;
+  width: 100%;
 }
 
 #projects h1 {
-  color: var(--white);
+  color: var(--oxford-blue);
   font-size: 2.5rem;
   font-weight: 700;
   position: relative;
   margin-bottom: 1rem;
 }
 
-#projects h1::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 4px;
-  background: var(--grad-primary);
-  border-radius: 2px;
-  margin: 10px auto 0;
-}
+
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2.2rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   padding-inline: 1rem;
 }
 
 .project-card {
-  background: var(--grad-card);
-  border: 1px solid rgba(99, 102, 241, 0.1);
-  border-radius: 12px;
-  padding: 2.5rem 2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1),
-              border-color 400ms ease,
-              box-shadow 400ms ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 450ms cubic-bezier(0.165, 0.84, 0.44, 1),
+              border-color 450ms ease,
+              box-shadow 450ms ease;
   position: relative;
   overflow: hidden;
-  cursor: default;
-}
-
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--grad-primary);
-  opacity: 0;
-  transition: opacity 400ms ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 20px 40px -15px rgba(35, 73, 255, 0.3),
-              inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  border-color: rgba(35, 73, 255, 0.4);
+  box-shadow: 0 20px 25px -5px rgba(35, 73, 255, 0.1), 0 10px 10px -5px rgba(35, 73, 255, 0.05);
 }
 
-.project-card:hover::before {
-  opacity: 1;
+/* Image Cover wrapper */
+.project-card-image-wrapper {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.project-header {
+.project-card-image-wrapper.trackyond-bg {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0b1528 100%);
+}
+
+.project-card-image-wrapper.spendsum-bg {
+  background: linear-gradient(135deg, #2349ff 0%, #1e3a8a 100%);
+}
+
+.project-card-image-wrapper.xoom-bg {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+}
+
+.live-demo-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--blue);
+  font-size: 7.5pt;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CSS Phone Mockup Inside Cover */
+.mini-device-mockup {
+  width: 110px;
+  height: 200px;
+  background-color: #070d19;
+  border: 3px solid #334155;
+  border-radius: 18px;
+  padding: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: -45px;
+  transition: transform 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mini-device-mockup.angled-left {
+  transform: rotate(-12deg) translateY(10px);
+}
+
+.mini-device-mockup.angled-right {
+  transform: rotate(12deg) translateY(10px);
+}
+
+.project-card:hover .mini-device-mockup.angled-left {
+  transform: rotate(-6deg) translateY(0px) scale(1.05);
+}
+
+.project-card:hover .mini-device-mockup.angled-right {
+  transform: rotate(6deg) translateY(0px) scale(1.05);
+}
+
+.mini-screen-content {
+  width: 100%;
+  height: 100%;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  color: #0f172a;
+  gap: 5px;
+}
+
+.mini-mockup-header {
+  font-size: 5pt;
+  font-weight: 700;
+  color: #64748b;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 2px;
 }
 
-.project-header h2 {
-  color: var(--white);
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-.repo-link svg {
-  fill: var(--text-secondary-dark);
-  width: 24px;
-  height: 24px;
-  transition: fill 300ms ease, transform 300ms ease;
-}
-
-.repo-link:hover svg {
-  fill: #818cf8;
-  transform: translateY(-2px) rotate(5deg);
-}
-
-.project-subtitle {
-  color: #818cf8;
-  font-size: 8.5pt;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.project-tech {
+.mini-mockup-body {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.8rem;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
 }
 
-.project-tech span {
-  background-color: rgba(99, 102, 241, 0.08);
-  color: #a5b4fc;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  padding: 0.3rem 0.75rem;
-  border-radius: 50px;
-  font-size: 8pt;
-  font-weight: 500;
-  transition: background-color 300ms ease, border-color 300ms ease;
+.mini-mockup-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5pt;
+  font-weight: bold;
+  margin-left: 2px;
 }
 
-.project-card:hover .project-tech span {
-  background-color: rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.4);
+.mini-mockup-bar {
+  height: 3px;
+  background-color: #e2e8f0;
+  border-radius: 2px;
+  width: 80%;
+  margin-left: 2px;
+}
+.mini-mockup-bar.short {
+  width: 45%;
 }
 
-.project-details {
+.mini-mockup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  margin-top: 4px;
+}
+
+.mini-mockup-box {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5pt;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Chart Mode for SpendSum mini screen */
+.mini-mockup-body.chart-mode {
+  justify-content: center;
+  gap: 3px;
+}
+
+.mini-mockup-chart {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 6px solid #e2e8f0;
+  border-top-color: var(--blue);
+  border-right-color: #8b5cf6;
+  margin: 2px auto 4px;
+}
+
+.mini-mockup-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 5pt;
+}
+
+.mini-mockup-item .mini-mockup-bar {
   margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 9.5pt;
-  color: var(--text-secondary-dark);
-  line-height: 1.7;
+  height: 3px;
 }
 
-.project-details li {
-  position: relative;
-  padding-left: 1.25rem;
-  margin-bottom: 0.8rem;
+/* CSS Desktop Mockup Inside Cover */
+.mini-desktop-mockup {
+  width: 170px;
+  height: 110px;
+  background-color: #070d19;
+  border: 2px solid #334155;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: -20px;
+  overflow: hidden;
+  transition: transform 450ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-card:hover .mini-desktop-mockup {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.mini-desktop-header {
+  height: 10px;
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  padding-inline: 5px;
+  gap: 2.5px;
+}
+
+.mini-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}
+.mini-dot.red { background-color: #ef4444; }
+.mini-dot.yellow { background-color: #f59e0b; }
+.mini-dot.green { background-color: #10b981; }
+
+.mini-desktop-body {
+  background-color: #0d1527;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-mockup-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  height: 70px;
+}
+
+.mini-video-cell {
+  background-color: #13223f;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7pt;
+}
+
+/* Card Info Area */
+.project-card-info {
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-grow: 1;
   text-align: left;
 }
 
-.project-details li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: #6366f1;
-  font-size: 11pt;
-  line-height: 1;
+.project-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-.project-details li:last-child {
-  margin-bottom: 0;
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue); /* Brand Royal Blue */
+}
+
+.project-card-repo {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  transition: color 300ms ease;
+}
+
+.project-card-repo:hover {
+  color: var(--oxford-blue);
+  text-decoration: underline;
+}
+
+.project-card-subtitle {
+  font-size: 7pt;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.project-card-description {
+  font-size: 9pt;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-card-tech span {
+  background-color: rgba(35, 73, 255, 0.08);
+  color: var(--blue);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  font-size: 7.5pt;
+  font-weight: 600;
+}
+
+.project-card-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 9pt;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+  margin-top: auto;
+}
+
+.project-card:hover .project-card-btn {
+  background-color: var(--oxford-blue);
+}
+
+/* Responsive Grid rules */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    max-width: 450px;
+  }
 }
