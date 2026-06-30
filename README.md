@@ -10,8 +10,6 @@ Click the preview below to view and download my full resume on Google Drive:
 
 [![Santanu Pramanik - Resume](assets/resume.jpg)](https://drive.google.com/file/d/1AHH7WFpHAd_LLwaRc0_HMm1ydLX_Xx8u/view?usp=sharing)
 
-*📝 Click the image above to open the PDF copy on Google Drive.*
-
 ---
 
 ## 📬 Contact & Socials
