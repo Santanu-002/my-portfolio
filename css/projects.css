@@ -332,10 +332,6 @@
   color: var(--text-secondary-dark);
   line-height: var(--leading-snug);
   margin-bottom: var(--space-2);
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .project-card-tech {
