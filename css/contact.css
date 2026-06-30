@@ -38,6 +38,7 @@
               border-color var(--transition-base),
               box-shadow var(--transition-base);
   position: relative;
+  min-width: 0;
 }
 
 .contact-card:hover {
@@ -58,6 +59,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-5);
+  position: relative;
+  min-width: 0;
 }
 
 .contact-icon-box {
@@ -88,6 +91,10 @@
   fill: var(--white);
 }
 
+.contact-method-text {
+  min-width: 0;
+}
+
 .contact-method-text h3 {
   font-size: var(--font-xs);
   color: var(--inactive);
@@ -104,10 +111,26 @@
   margin: 0;
   text-decoration: none;
   transition: color var(--transition-fast);
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.contact-method-text a:hover {
+.contact-method-text a:hover,
+.contact-method:hover .contact-method-text a {
   color: var(--blue);
+}
+
+.contact-method-text a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .contact-social-grid {
