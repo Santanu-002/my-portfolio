@@ -35,9 +35,9 @@
   font-weight: var(--weight-bold);
   color: var(--inactive);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: var(--space-1);
+  gap: var(--space-2);
   margin-bottom: 0px;
 }
 
@@ -57,17 +57,17 @@
   border-radius: var(--radius-md);
   height: 2.2rem;
   overflow: hidden;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
 .slider span {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   flex-shrink: 0;
-  text-align: center;
+  text-align: left;
   color: var(--blue);
   animation: slide 8s infinite ease-in-out;
 }
@@ -234,11 +234,10 @@
   display: flex;
   align-items: center;
   gap: var(--space-5);
-  margin-block: var(--space-2) var(--space-4);
-  background-color: var(--blue-4);
-  border: 1px solid var(--blue-8);
-  padding: 0.8rem 1.8rem;
-  border-radius: var(--radius-lg);
+  margin-block: var(--space-4);
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
 .stat-item {
@@ -272,14 +271,17 @@
 
 @media (max-width: 768px) {
   .hero-stats {
-    flex-direction: column;
-    gap: var(--space-4);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4) var(--space-6);
     width: 100%;
-    max-width: 280px;
-    padding: var(--space-4);
+    max-width: none;
+    background: none;
+    border: none;
+    padding: 0;
   }
   .stat-divider {
-    width: 60%;
-    height: 1px;
+    display: none;
   }
 }
