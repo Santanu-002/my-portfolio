@@ -145,13 +145,15 @@ section h1 {
   transition: transform 300ms ease;
 }
 
-.back-to-top:hover {
-  background-color: var(--oxford-blue);
-  border-color: var(--oxford-blue);
-}
+@media (hover: hover) {
+  .back-to-top:hover {
+    background-color: var(--oxford-blue);
+    border-color: var(--oxford-blue);
+  }
 
-.back-to-top:hover svg {
-  transform: translateY(-2px);
+  .back-to-top:hover svg {
+    transform: translateY(-2px);
+  }
 }
 
 /* -------- Footer Styles ------- */
