@@ -359,7 +359,24 @@
   border-radius: var(--radius-xl);
   font-size: var(--font-xs);
   font-weight: var(--weight-semi);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
+
+.tech-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.tech-icon.svg-icon {
+  width: 13px;
+  height: 13px;
+  color: var(--blue);
+}
+
 
 .project-card-btn {
   display: block;

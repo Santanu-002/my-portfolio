@@ -8,7 +8,7 @@ This is my personal portfolio website, built with HTML, CSS, and vanilla JavaScr
 
 Click the preview below to view and download my full resume on Google Drive:
 
-[![Santanu Pramanik - Resume](assets/resume.jpg)](https://drive.google.com/file/d/1AHH7WFpHAd_LLwaRc0_HMm1ydLX_Xx8u/view?usp=sharing)
+[![Santanu Pramanik - Resume](assets/resume.jpg)](https://drive.google.com/file/d/1JGetTB7pfLzVuUqkFe9zMF3lV6PA-MUF/view?usp=sharing)
 
 ---
 

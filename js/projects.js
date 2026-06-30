@@ -264,9 +264,66 @@ export function initProjects() {
     // Populate Tech pills
     const techContainer = document.getElementById("modal-tech");
     techContainer.innerHTML = "";
+
+    // Icon mapper for tech stack tags
+    const getTechIconHTML = (tech) => {
+      const lower = tech.toLowerCase();
+      if (lower.includes("flutter")) {
+        return `<img src="assets/flutter.png" alt="Flutter" class="tech-icon" />`;
+      } else if (lower.includes("fastapi")) {
+        return `<img src="assets/FastAPI.png" alt="FastAPI" class="tech-icon" />`;
+      } else if (lower.includes("postgresql")) {
+        return `<img src="assets/postgresql.png" alt="PostgreSQL" class="tech-icon" />`;
+      } else if (lower.includes("redis")) {
+        return `
+          <svg viewBox="0 0 24 24" class="tech-icon svg-icon" fill="currentColor">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        `;
+      } else if (lower.includes("bloc")) {
+        return `<img src="assets/bloc.png" alt="BLoC" class="tech-icon" />`;
+      } else if (lower.includes("drift") || lower.includes("sqlite")) {
+        return `<img src="assets/sqlite.png" alt="SQLite" class="tech-icon" />`;
+      } else if (lower.includes("fpdart") || lower.includes("dart")) {
+        return `<img src="assets/dart.png" alt="Dart" class="tech-icon" />`;
+      } else if (lower.includes("next.js") || lower.includes("nextjs")) {
+        return `<img src="assets/next-js.png" alt="Next.js" class="tech-icon" />`;
+      } else if (lower.includes("clerk")) {
+        return `
+          <svg viewBox="0 0 24 24" class="tech-icon svg-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        `;
+      } else if (lower.includes("stream")) {
+        return `
+          <svg viewBox="0 0 24 24" class="tech-icon svg-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+          </svg>
+        `;
+      } else if (lower.includes("websocket")) {
+        return `
+          <svg viewBox="0 0 24 24" class="tech-icon svg-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+          </svg>
+        `;
+      } else if (lower.includes("gorouter")) {
+        return `
+          <svg viewBox="0 0 24 24" class="tech-icon svg-icon" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        `;
+      }
+      return "";
+    };
+
     data.tech.forEach((t) => {
       const span = document.createElement("span");
-      span.textContent = t;
+      span.innerHTML = `${getTechIconHTML(t)}${t}`;
       techContainer.appendChild(span);
     });
 
