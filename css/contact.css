@@ -151,7 +151,40 @@
   font-weight: var(--weight-semi);
   font-size: var(--font-sm);
   text-decoration: none;
-  transition: transform var(--transition-base), background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+}
+
+.contact-social-btn > * {
+  z-index: 1;
+}
+
+.contact-social-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: width var(--transition-base);
+  z-index: 0;
+}
+
+.contact-social-btn:hover::before {
+  width: 100%;
+}
+
+.contact-social-btn.github-btn::before {
+  background-color: var(--brand-github);
+}
+
+.contact-social-btn.linkedin-btn::before {
+  background-color: var(--brand-linkedin);
+}
+
+.contact-social-btn.whatsapp-btn::before {
+  background-color: var(--brand-whatsapp);
 }
 
 .contact-social-inner {
@@ -177,21 +210,18 @@
 
 /* Individual Brand Hovers */
 .contact-social-btn.github-btn:hover {
-  background-color: var(--brand-github);
   border-color: var(--brand-github);
   color: var(--white);
   transform: translateX(4px);
 }
 
 .contact-social-btn.linkedin-btn:hover {
-  background-color: var(--brand-linkedin);
   border-color: var(--brand-linkedin);
   color: var(--white);
   transform: translateX(4px);
 }
 
 .contact-social-btn.whatsapp-btn:hover {
-  background-color: var(--brand-whatsapp);
   border-color: var(--brand-whatsapp);
   color: var(--white);
   transform: translateX(4px);
