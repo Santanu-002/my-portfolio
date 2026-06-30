@@ -271,12 +271,12 @@
 
 @media (max-width: 768px) {
   .hero-stats {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-4) var(--space-6);
     width: 100%;
-    max-width: none;
+    max-width: 340px;
+    margin-inline: auto;
     background: none;
     border: none;
     padding: 0;
