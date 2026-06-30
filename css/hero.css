@@ -269,6 +269,31 @@
   background-color: var(--blue-15);
 }
 
+/* Hero Avatar Image */
+.avatar {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar img {
+  width: 100%;
+  max-width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+  border: 4px solid var(--blue-15);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.avatar img:hover {
+  transform: scale(1.03);
+  border-color: var(--blue-25);
+}
+
 @media (max-width: 768px) {
   .hero-stats {
     flex-direction: row;
