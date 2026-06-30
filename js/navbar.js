@@ -12,12 +12,14 @@ export function initNavbar() {
   if (hamburger && menu) {
     hamburger.addEventListener("click", () => {
       menu.style.display = "block";
+      document.body.style.overflow = "hidden";
     });
   }
 
   if (closeBtn && menu) {
     closeBtn.addEventListener("click", () => {
       menu.style.display = "none";
+      document.body.style.overflow = "";
     });
   }
 
@@ -25,6 +27,7 @@ export function initNavbar() {
     quickLinks.forEach((link) => {
       link.addEventListener("click", () => {
         menu.style.display = "none";
+        document.body.style.overflow = "";
       });
     });
   }
@@ -42,44 +45,59 @@ export function initNavbar() {
     { id: "contact", el: document.querySelector("#contact") }
   ];
 
+  function updateNavbar() {
+    const scrollY = window.scrollY;
+
+    // Toggle navbar scrolled style
+    if (navbar) {
+      if (scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
+
+    // Active link highlighting
+    let currentActiveId = "home";
+    scrollSections.forEach((sec) => {
+      if (sec.el) {
+        const top = sec.el.getBoundingClientRect().top + scrollY;
+        if (scrollY >= top - 200) {
+          currentActiveId = sec.id;
+        }
+      }
+    });
+
+    desktopLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href === `#${currentActiveId}` || (currentActiveId === "home" && href === "#home")) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    quickLinks.forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href === `#${currentActiveId}` || (currentActiveId === "home" && href === "#home")) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
   let scrollTick = false;
   window.addEventListener("scroll", () => {
     if (!scrollTick) {
       window.requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-
-        // Toggle navbar scrolled style
-        if (navbar) {
-          if (scrollY > 50) {
-            navbar.classList.add("scrolled");
-          } else {
-            navbar.classList.remove("scrolled");
-          }
-        }
-
-        // Active link highlighting
-        let currentActiveId = "home";
-        scrollSections.forEach((sec) => {
-          if (sec.el) {
-            const top = sec.el.getBoundingClientRect().top + scrollY;
-            if (scrollY >= top - 200) {
-              currentActiveId = sec.id;
-            }
-          }
-        });
-
-        desktopLinks.forEach((link) => {
-          const href = link.getAttribute("href");
-          if (href === `#${currentActiveId}` || (currentActiveId === "home" && href === "#home")) {
-            link.classList.add("active");
-          } else {
-            link.classList.remove("active");
-          }
-        });
-
+        updateNavbar();
         scrollTick = false;
       });
       scrollTick = true;
     }
   });
+
+  // Call immediately on page load
+  updateNavbar();
 }
